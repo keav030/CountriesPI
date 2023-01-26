@@ -1,9 +1,19 @@
-const { getAllCountries, getContryById } = require("../controllers/countriesController")
+const { getAllCountries, getContryById, getUserByName } = require("../controllers/countriesController")
 
 const getCountriesHandler = async (req, res) => {
+    const { name } = req.query
     try {
-        let countries = await getAllCountries()
-        res.send(countries)
+        let countries
+        if(name){
+            countries = await getUserByName(name)
+        }else{
+            countries = await getAllCountries()
+        }
+       
+        countries.length == 0 ? 
+            res.send("No se encontro ningun pais con ese nombre") :
+            res.send(countries)
+
     } catch (error) {
         res.send(error)
     }

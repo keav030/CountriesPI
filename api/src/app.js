@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
 const { setCountriesDB } = require('./controllers/countriesController.js');
+const cors = require("cors")
 
 require('./db.js');
 
@@ -22,8 +23,10 @@ server.use((req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
+server.use(cors())
 
 setCountriesDB()
+
 server.use('/', routes);
 
 // Error catching endware.

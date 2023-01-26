@@ -4,6 +4,5 @@ const { getCountriesHandler, getCountryHandler } = require("../handlers/countrie
 
 countriesRouter.get("/", getCountriesHandler)
 countriesRouter.get("/:id", getCountryHandler)
-//countriesRouter.post("/", createCountryHandler)
 
 module.exports = countriesRouter
