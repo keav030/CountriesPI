@@ -10,17 +10,19 @@ const ContinentSelector = () => {
         dispatch(filterByContinent(value))
         dispatch(setPage(1))
     }
-
+    
     return(
         <div>
             <select onChange={continentSelectorHandler} name="continents">
-                <option value="All">Continente</option>
+                <option option="true" hidden>Continente</option>
+                <option value="All">Todos</option>
                 <option value="Africa">Africa</option>
                 <option value="Asia">Asia</option>
                 <option value="Europe">Europa</option>
                 <option value="Antarctica">Antarctica</option>
                 <option value="North America">Norte America</option>
                 <option value="South America">Sudamerica</option>
+                <option value="Oceania">Oceania</option>
             </select>
         </div>
     )

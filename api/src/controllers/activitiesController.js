@@ -6,6 +6,12 @@ const createActivity = async (name, dificulty, duration, season, countryId) =>{
     return newActivity
 }
 
+const getActivities = async () => {
+    const activities = await Activity.findAll()
+    return activities
+}
+
 module.exports = {
-    createActivity
+    createActivity,
+    getActivities
 }

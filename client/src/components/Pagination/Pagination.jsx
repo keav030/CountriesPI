@@ -31,7 +31,7 @@ const Pagination = ({countriesPerPage, countries}) => {
     
     const next = ">>"
     const prev = "<<"
-
+    
     
     return(
         <nav>

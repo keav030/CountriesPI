@@ -1,4 +1,4 @@
-const { createActivity } = require("../controllers/activitiesController")
+const { createActivity, getActivities } = require("../controllers/activitiesController")
 
 const createActivitiesHandler = async (req, res) => {
     const {name, dificulty, duration, season, countryId } = req.body
@@ -11,6 +11,18 @@ const createActivitiesHandler = async (req, res) => {
     }
 }
 
+
+const getActivitiesHandler = async (req, res) => {
+    try {
+        const activities = await getActivities()
+        res.send(activities)
+    } catch (error) {
+        res.send("La actividad no se ha podido crear")
+    }
+}
+
+
 module.exports = {
-    createActivitiesHandler
+    createActivitiesHandler,
+    getActivitiesHandler
 }

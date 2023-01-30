@@ -12,7 +12,8 @@ const CardsContainer = (props) => {
                     continent={country.continent}
                     id={country.id}
                 />
-            })}
+                })
+            }
         </div>
     )
 }
