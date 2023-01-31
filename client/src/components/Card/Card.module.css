@@ -1,16 +1,36 @@
 .card{
     background-color: #DDDDDD;
-    height: fit-content ;
     border-radius: 10px;
     text-align:center;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     font-family: arial;
+    font-size: 15px;
+    width: 200px;
+    height: 250px;
 }
 
 .card:hover{
     box-shadow: none;
 }
 
+.title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
 img{
     border-radius: 20px;  
+    object-fit: cover;
+    
+}
+
+.goDetail{
+    font-size: 15px;
+    text-decoration:none;
+    color: teal;
+    font-weight: bold;
+}
+
+.goDetail:hover{
+    color: #97DECE;
 }

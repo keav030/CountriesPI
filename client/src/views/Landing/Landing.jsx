@@ -7,7 +7,7 @@ const Landing = () => {
             <div className={style.landingItems}>
                 <h1 className={style.landingTittle}>PI Countries</h1>
                 <Link to="/home">
-                    <button className={style.landingButton}>Home</button>
+                    <button className={style.landingButton}>Empezar</button>
                 </Link>
             </div>
             

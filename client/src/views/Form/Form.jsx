@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom"
 import { getCountries, orderByProp } from "../../redux/actions"
+import style from "./Form.module.css"
 
 const Form = () => {
 
@@ -125,16 +126,18 @@ const Form = () => {
     
 
     return(
-        <div>
-            <Link to="/home">Home</Link>
-            <form onSubmit={submitHandler}>
-                <div>
-                    <label>Nombre</label>
-                    <input type="text" value={form.name} onChange={changeHandler} name="name" />
-                    <span>{errors.name}</span>
+        <div className={style.mainFormContainer}>
+            <Link to="/home">
+                <button className={style.detailBackButton}>Volver</button>
+            </Link>
+            <form className={style.infoFromContainer} onSubmit={submitHandler}>
+                <div className={style.divFields}>
+                    <label>Nombre:</label>
+                    <input className={style.inputForm} type="text" value={form.name} onChange={changeHandler} name="name" />
+                    <p className={style.error}>{errors.name}</p>
                 </div>
-                <div>
-                    <label>Dificultad</label>
+                <div className={style.divFields}>
+                    <label>Dificultad:</label>
                     <select onChange={changeHandler} name="dificulty">
                         <option option="true" hidden>--Seleciona Dificultad--</option>
                         <option value={1}>1</option>
@@ -143,25 +146,26 @@ const Form = () => {
                         <option value={4}>4</option>
                         <option value={5}>5</option>
                     </select>
+                    <p className={style.error}>{errors.dificulty}</p>
                 </div>
-                <div>
-                    <label>Duracion</label>
-                    <input type="text" value={form.duration} onChange={changeHandler} name="duration"/>
-                    <span>{errors.duration}</span>
+                <div className={style.divFields}>
+                    <label>Duracion:</label>
+                    <input className={style.inputForm} type="text" value={form.duration} onChange={changeHandler} name="duration"/>
+                    <p className={style.error}>{errors.duration}</p>
                 </div>
-                <div>
-                    <label>Temporada</label>
+                <div className={style.divFields}>
+                    <label>Temporada:</label>
                     <select onChange={changeHandler} name="season">
                         <option option="true" hidden>--Seleciona Estacion--</option>
                         <option value="Primavera">Primavera</option>
                         <option value="Verano">Verano</option>
                         <option value="Otoño">Otoño</option>
                         <option value="Invierno">Invierno</option>
-                        
                     </select>
+                    <p className={style.error}>{errors.season}</p>
                 </div>
-                <div>
-                    <label>Paises</label>
+                <div className={style.divFields}>
+                    <label>Paises: </label>
                     <select onChange={changeCountriesHandler} name="countryId">
                         <option option="true" default hidden>--Seleciona Un Pais--</option>
                         {countries && countries.map( (country, index) =>
@@ -169,14 +173,17 @@ const Form = () => {
                         
                         )}
                     </select>
-                    {form.countryId && form.countryId.map((e, index) => (
-                        <div key={index}>
-                            <span key={index}>{e}</span>
-                            <button value={e} type="button" onClick={countryButtonHandler} key={`${index}b`} name="countryId">X</button>
-                        </div>
-                    ))}
+                    <div className={style.countriesContainer}>
+                        {form.countryId && form.countryId.map((e, index) => (
+                            <div className={style.countriesCodes}>
+                                <label key={index}>{e}</label>
+                                <button className={style.buttonCountry} value={e} type="button" onClick={countryButtonHandler} key={`${index}b`} name="countryId"> X </button>
+                            </div>
+                        ))}
+                    </div>
+                    <p className={style.error}>{errors.countryId}</p>
                 </div>
-                <button disabled={submitValidate} type="submit">Enviar</button>
+                <button className={style.detailButton} disabled={submitValidate} type="submit">Enviar</button>
             </form>
         </div>    
     )

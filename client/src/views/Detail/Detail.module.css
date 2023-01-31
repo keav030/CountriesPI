@@ -1,0 +1,67 @@
+.mainDetailContainer{
+    display: flex;
+    padding: 30px;
+    background-color: #DDDDDD;
+}
+
+.infoContainer{
+    font-family: Arial;
+    margin: auto;
+    background-color: #439A97;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    color: #EEEEEE;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.activitiesDetailMain{
+    background-color: #EEEEEE;
+    padding: 10px;
+    color: #439A97;
+    border-radius: 20px;
+}
+
+.activitiesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.activtiesDetail{
+    padding: 10px;
+    background-color: #DDDDDD;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.countryName{
+    font-size: 25px;   
+    font-weight: bold;
+}
+
+.activityName{ 
+    font-size: 18px;  
+    font-weight: bold;
+}
+
+.buttonDetail{
+    background-color: #439A97;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px;
+    color: #EEEEEE;
+}
+
+.buttonDetail:hover{
+    background-color: #EEEEEE;
+    color: #439A97;
+}

@@ -12,12 +12,12 @@ const Card = (props) => {
 
     return(
         <div className={style.card}>      
-            <img src={props.flag} alt="country flag" height="100" />
+            <img src={props.flag} alt="country flag" height="100" width="178" />
 
-            <p>{props.name}</p>
-            <p>{props.continent}</p>
+            <p className={style.title}>{props.name}</p>
+            <p>Continente: {props.continent}</p>
             
-            <Link onClick={goToDetail} to="/detail">Detalle</Link>
+            <Link className={style.goDetail} onClick={goToDetail} to="/detail">Ver mas...</Link>
         </div>
     )
 }
