@@ -34,18 +34,19 @@ const Pagination = ({countriesPerPage, countries}) => {
     
     
     return(
-        <nav>
+        <nav className={style.mainPagination}>
             <ul>
-                <button onClick={() => prevPage()}>{prev}</button>
+                <button id={style.moveLeft} className={style.move} onClick={() => prevPage()}>{prev}</button>
                 {pageNumbers && 
                 pageNumbers.map((number, index) => (
                     <button
+                        
                         key = {index}
                         onClick={() => paginated(number)}
                         className={number === currentPage ? style.active : style.default}
                     >{number}</button>
                 ))}
-                <button onClick={() => nextPage(pageNumbers.length)}>{next}</button>
+                <button id={style.moveRight} className={style.move} onClick={() => nextPage(pageNumbers.length)}>{next}</button>
             </ul>
         </nav>
     )

@@ -1,5 +1,6 @@
 import { useDispatch} from "react-redux";
 import { orderByProp, setPage } from "../../redux/actions"
+import style from "./CountrySort.module.css"
 
 const CountrySort = () => {
 

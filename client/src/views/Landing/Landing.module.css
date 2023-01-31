@@ -1,0 +1,45 @@
+.mainLanding{
+    background-image: url('./backgroun_img.jpg');
+    background-size: cover; 
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+.landingItems{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landingButton{
+    position: absolute;
+    left: 50%;
+    margin: 0px -25px;
+    bottom: 0%;
+    background-color: teal;
+    border: none;
+    font-size: 20px;
+    color: #EEEEEE;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.landingButton:hover{
+    background-color: #BEA27B;
+    color: #5C8484; 
+}
+
+.landingTittle{
+    background-color: rgba(238, 238, 238, 0.7);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-family: arial;
+    color: #000000;
+    font-size: 50px;
+    top: 10%;
+    margin: 30px;
+}

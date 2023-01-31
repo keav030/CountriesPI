@@ -1,5 +1,52 @@
-.active{
+.default{
+    background-color: teal;
     border: none;
-    background-color: white;
+    font-size: 18px;
+    padding: 10px;
+    width: 40px;
+    color: #DDDDDD;
 }
 
+.default:hover{
+    background-color: #DDDDDD;
+    color: teal;
+}
+
+.active{
+    border: none;
+    background-color: #DDDDDD;
+    font-size: 18px;
+    padding: 10px;
+    width: 40px;
+    color: teal;
+}
+
+.move{
+    background-color: teal;
+    border: none;
+    font-size: 18px;
+    padding: 10px; 
+    color: #DDDDDD;
+    
+}
+
+#moveLeft{
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+}
+
+#moveRight{
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+}
+
+.move:hover{
+    background-color: #DDDDDD;
+    color: teal; 
+}
+
+.mainPagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

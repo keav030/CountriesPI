@@ -1,0 +1,20 @@
+select {
+    background-color: #EEEEEE;
+    padding: 5px; 
+    border-radius: 15px;
+    font-size: 15px;
+    margin: 2px;
+}
+
+select:hover{
+    background-color: #DDDDDDDD;
+}
+
+option{
+    border-radius: 20px;
+}
+
+option:checked, option:hover {
+    color: white;
+    background: teal;
+}

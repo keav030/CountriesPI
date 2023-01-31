@@ -1,0 +1,10 @@
+.select {
+    background-color: #EEEEEE;
+    padding: 5px; 
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.select:hover{
+    background-color: #DDDDDDDD;
+}

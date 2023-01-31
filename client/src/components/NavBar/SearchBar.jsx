@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchCountries, setPage } from "../../redux/actions"
+import style from "./SearchBar.module.css"
 
 const SearchBar = () => {
 
@@ -21,9 +22,8 @@ const SearchBar = () => {
 
     return(
         <form onSubmit={submitHandler}>
-            <label>Buscar: </label>
-            <input name="countryName" type="text" onChange={changeHandler} value={value}></input>
-            <button type="submit">Buscar</button>
+            <input id={style.searchInput} name="countryName" type="text" onChange={changeHandler} value={value}></input>
+            <button id={style.searchButton}type="submit">Buscar</button>
         </form> 
     )
 }

@@ -1,8 +1,6 @@
 .mainNavBar{
     display: flex;
     flex-direction:row;
-    justify-content: space-around;
-    background-color: rgb(220, 220, 220);
-    border-radius: 5px;
-    border: 1px solid black;
+    justify-content: end;
+    background-color: #439A97;
 }

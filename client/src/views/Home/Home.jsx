@@ -5,7 +5,8 @@ import { getActivities, getCountries } from "../../redux/actions"
 import NavBar from "../../components/NavBar/NavBar";
 import Pagination from "../../components/Pagination/Pagination";
 import style from "./Home.module.css"
-
+import { Link } from "react-router-dom"
+import SearchBar from "../../components/NavBar/SearchBar";
 
 const Home = () => {
 
@@ -39,6 +40,12 @@ const Home = () => {
 
     return(
         <div className={style.main}>
+            <div className={style.searchAdd}>
+                <SearchBar></SearchBar>
+                <Link to="/create">
+                    <button id={style.createButton}>Crear Nueva Actividad</button>
+                </Link>
+            </div>
             <NavBar></NavBar>
             {countries===countriesNotFound && <h1>{countriesNotFound}</h1>}
             {countries!==countriesNotFound && <CardsContainer countries={currentCountries}/>}

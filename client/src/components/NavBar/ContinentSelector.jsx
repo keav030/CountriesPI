@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { filterByContinent, setPage } from "../../redux/actions"
+import style from "./Selector.module.css"
 
 const ContinentSelector = () => {
 
@@ -13,7 +14,7 @@ const ContinentSelector = () => {
     
     return(
         <div>
-            <select onChange={continentSelectorHandler} name="continents">
+            <select className={style.select} onChange={continentSelectorHandler} name="continents">
                 <option option="true" hidden>Continente</option>
                 <option value="All">Todos</option>
                 <option value="Africa">Africa</option>

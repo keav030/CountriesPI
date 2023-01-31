@@ -7,7 +7,6 @@ import SearchBar from "./SearchBar"
 const NavBar = () => {
     return(
         <div className={style.mainNavBar}>
-            <SearchBar></SearchBar>
             <ContinentSelector></ContinentSelector>
             <ActivitySelector></ActivitySelector>
             <CountrySort></CountrySort>

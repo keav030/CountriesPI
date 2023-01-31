@@ -1,3 +1,27 @@
-.main{
-    
+.searchAdd{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 10px;
+    background-color: teal;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#createButton{
+    background-color: #97DECE;
+    font-size: 17px;
+    border: none;
+    color: teal;
+    border-radius: 15px;
+    padding: 9px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#createButton:hover{
+    background-color: #DDDDDD;
+    color: #439A97;
 }

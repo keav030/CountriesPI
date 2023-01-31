@@ -1,9 +1,14 @@
 .card{
-    background-color: rgb(230, 224, 214);
-    border: 1px solid black;
+    background-color: #DDDDDD;
     height: fit-content ;
     border-radius: 10px;
     text-align:center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-family: arial;
+}
+
+.card:hover{
+    box-shadow: none;
 }
 
 img{
