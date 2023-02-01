@@ -11,7 +11,7 @@ html, body {
     flex-wrap: wrap;
     gap: 1em;
     padding: 10px;
-    background-color: #EEEEEE;
+    background-color:transparent;
     align-items: center;
     justify-content: center;
 }

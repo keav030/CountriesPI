@@ -5,9 +5,9 @@ const createActivitiesHandler = async (req, res) => {
     console.log(countryId)
     try {
         const newActivity = await createActivity(name, dificulty, duration, season, countryId)
-        res.status(200).send(newActivity)
+        res.status(201).send(newActivity)
     } catch (error) {
-        res.send(error)
+        res.status(400).send("La actividad no se ha podido crear")
     }
 }
 
@@ -15,9 +15,9 @@ const createActivitiesHandler = async (req, res) => {
 const getActivitiesHandler = async (req, res) => {
     try {
         const activities = await getActivities()
-        res.send(activities)
+        res.status(200).send(activities)
     } catch (error) {
-        res.send("La actividad no se ha podido crear")
+        res.status(400).send(error) 
     }
 }
 

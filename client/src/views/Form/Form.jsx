@@ -68,7 +68,7 @@ const Form = () => {
     const validate = (form, property) => {
         if(property === "name") {
             let response = ""
-            if(!( /^[A-Za-z\s]*$/.test(form.name) )) response="Solamente puedes poner caracteres Alfabeticos"
+            if(!( /^[A-Za-z\s]*$/.test(form.name) && form.name.length > 2 )) response="Solamente puedes poner caracteres Alfabeticos y debe terner minimo 3"
             if(form.name === "") response="Nombre vacio" 
 
             setErrors({...errors, name:response}) 
@@ -101,8 +101,17 @@ const Form = () => {
         console.log("form en submit: ", form)
 
         axios.post("http://localhost:3001/activities", form)
-            .then(res => alert(res))
-            .catch(err=>console.log(err))
+            .then(res => alert(res.data))
+            .catch(err=> console.log(err))
+        
+
+        setForm({
+            name:"",
+            dificulty : "",
+            duration: "",
+            season: "",
+            countryId: [] 
+        })
     }
 
 
@@ -175,7 +184,7 @@ const Form = () => {
                     </select>
                     <div className={style.countriesContainer}>
                         {form.countryId && form.countryId.map((e, index) => (
-                            <div className={style.countriesCodes}>
+                            <div  key={index} className={style.countriesCodes}>
                                 <label key={index}>{e}</label>
                                 <button className={style.buttonCountry} value={e} type="button" onClick={countryButtonHandler} key={`${index}b`} name="countryId"> X </button>
                             </div>

@@ -11,11 +11,11 @@ const getCountriesHandler = async (req, res) => {
         }
        
         countries.length == 0 ? 
-            res.send("No se encontro ningun pais con ese nombre") :
-            res.send(countries)
+            res.status(400).send("No se encontro ningun pais con ese nombre") :
+            res.status(200).send(countries)
 
     } catch (error) {
-        res.send(error)
+        res.status(400).send(error)
     }
 }
 
@@ -25,7 +25,7 @@ const getCountryHandler = async (req, res) => {
         const country = await getContryById(id)
         res.status(200).send(country)
     } catch (error) {
-        res.send(error)
+        res.status(400).send(error)
     }
 }
 module.exports = {
