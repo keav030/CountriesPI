@@ -11,7 +11,7 @@ const getCountriesHandler = async (req, res) => {
         }
        
         countries.length == 0 ? 
-            res.status(400).send("No se encontro ningun pais con ese nombre") :
+            res.status(200).send("Country not found") :
             res.status(200).send(countries)
 
     } catch (error) {

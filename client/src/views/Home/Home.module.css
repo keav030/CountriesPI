@@ -1,3 +1,15 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('./backgroundmap.jpg');
+    background-color: #EEEEEE;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
 .searchAdd{
     display: flex;
     flex-direction: column;
@@ -24,4 +36,14 @@
 #createButton:hover{
     background-color: #DDDDDD;
     color: #439A97;
+}
+
+#notFoundCountryAd{
+    text-align: center;
+    border-radius: 10px;
+    font-family: arial;
+    display: flex;
+    color: #EEEEEE;
+    justify-content: center;
+    text-shadow: 0 0 30px black;
 }

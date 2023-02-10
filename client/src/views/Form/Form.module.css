@@ -1,7 +1,7 @@
 .mainFormContainer{
     display: flex;
     padding: 30px;
-    background-color: #EEEEEE;
+    background-color: transparent;
 }
 
 .infoFromContainer{
@@ -19,6 +19,13 @@
     color: rgb(255, 35, 35);
     background-color: #DDDDDD;
     border-radius: 5px;
+}
+
+#titleForm{
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    color: #BEA27B;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .detailBackButton{

@@ -17,10 +17,11 @@ const Home = () => {
         dispatch(getActivities())
     },[dispatch])
 
-    const countriesNotFound ="No se encontro ningun pais con ese nombre"
+    const countriesNotFound ="Country not found"
 
     const countries = useSelector(state=>state.countries)
     const orderState = useSelector(state=>state.order)
+
     let currentCountries = []
     const tenCountries = countries.slice(9, countries.length)
     
@@ -47,7 +48,7 @@ const Home = () => {
                 </Link>
             </div>
             <NavBar></NavBar>
-            {countries===countriesNotFound && <h1>{countriesNotFound}</h1>}
+            {countries===countriesNotFound && <h1 id={style.notFoundCountryAd}>No se encontro ningun Pais</h1>}
             {countries!==countriesNotFound && <CardsContainer countries={currentCountries}/>}
             {countries!==countriesNotFound && <Pagination 
                 countriesPerPage={countriesPerPage}

@@ -140,11 +140,19 @@ const Form = () => {
                 <button className={style.detailBackButton}>Volver</button>
             </Link>
             <form className={style.infoFromContainer} onSubmit={submitHandler}>
+                <h1 id={style.titleForm}>Crea tu Actividad</h1>
                 <div className={style.divFields}>
                     <label>Nombre:</label>
                     <input className={style.inputForm} type="text" value={form.name} onChange={changeHandler} name="name" />
                     <p className={style.error}>{errors.name}</p>
                 </div>
+
+                <div className={style.divFields}>
+                    <label>Duracion (Horas):</label>
+                    <input className={style.inputForm} type="text" value={form.duration} onChange={changeHandler} name="duration"/>
+                    <p className={style.error}>{errors.duration}</p>
+                </div>
+
                 <div className={style.divFields}>
                     <label>Dificultad:</label>
                     <select onChange={changeHandler} name="dificulty">
@@ -157,11 +165,7 @@ const Form = () => {
                     </select>
                     <p className={style.error}>{errors.dificulty}</p>
                 </div>
-                <div className={style.divFields}>
-                    <label>Duracion:</label>
-                    <input className={style.inputForm} type="text" value={form.duration} onChange={changeHandler} name="duration"/>
-                    <p className={style.error}>{errors.duration}</p>
-                </div>
+                
                 <div className={style.divFields}>
                     <label>Temporada:</label>
                     <select onChange={changeHandler} name="season">
